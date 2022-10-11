@@ -3,9 +3,9 @@ Uma nova versão do site da loup.host, agora desenvolvido com Next.js
 
 
 ### Layout
-![Alt text](https://imgur.com/u3Juu9V "Index")
-![Alt text](https://imgur.com/0v3hjwT "Minecraft")
-![Alt text](https://imgur.com/WMSpvJ7 "Site")
+![Alt Index](https://i.imgur.com/u3Juu9V.png "Index")
+![Alt Minecraft](https://i.imgur.com/0v3hjwT.png "Minecraft")
+![Alt Site](https://i.imgur.com/WMSpvJ7.png "Site")
 
 
 ### API que é usada para listar os planos vendidos no site
