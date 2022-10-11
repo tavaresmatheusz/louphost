@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
+import AnimatedButton from "../components/animatedButton";
+import AnimatedIcon from "../components/animatedIcon";
+import AnimatedImage from "../components/animatedImage";
 
 export default function Home() {
   return (
@@ -25,32 +28,12 @@ export default function Home() {
 
           <div className={styles.text_btns_box}>
             <Link href="#">
-              <motion.a
-                href="#"
-                className={styles.filled_btn}
-                whileHover={{
-                  position: "relative",
-                  zIndex: 1,
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
-                }}
-              >
-                ÁREA DO CLIENTE
-              </motion.a>
+              <AnimatedButton className={styles.filled_btn}>ÁREA DO CLIENTE</AnimatedButton>
             </Link>
             <Link href="#">
-              <motion.a
-                href="#"
-                className={styles.unfilled_btn}
-                whileHover={{
-                  position: "relative",
-                  zIndex: 1,
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
-                }}
-              >
+              <AnimatedButton className={styles.unfilled_btn}>
                 SAIBA MAIS
-              </motion.a>
+              </AnimatedButton>
             </Link>
           </div>
         </div>
@@ -76,14 +59,7 @@ export default function Home() {
 
           <div className={styles.reasons_icons}>
             <div className={styles.reason}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Buy.png"
                   alt="Buy"
@@ -91,19 +67,12 @@ export default function Home() {
                   height={35}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>Compra rápida e fácil</p>
             </div>
 
             <div className={`${styles.reason}`}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Unlock.png"
                   alt="Security"
@@ -111,19 +80,12 @@ export default function Home() {
                   height={40}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>Segurança e facilidade</p>
             </div>
 
             <div className={`${styles.reason}`}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Volume-Down.png"
                   alt="Support"
@@ -131,21 +93,14 @@ export default function Home() {
                   height={36}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>Suporte 24/7</p>
             </div>
           </div>
 
           <div className={styles.reasons_icons}>
             <div className={styles.reason}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Calendar.png"
                   alt="Calendar"
@@ -153,19 +108,12 @@ export default function Home() {
                   height={40}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>99.9% de uptime</p>
             </div>
 
             <div className={`${styles.reason}`}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Swap.png"
                   alt="Swap"
@@ -173,19 +121,12 @@ export default function Home() {
                   height={48}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>Conexão segura e rápida</p>
             </div>
 
             <div className={`${styles.reason}`}>
-              <motion.div
-                className={styles.reason_icon}
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: 10,
-                }}
-              >
+              <AnimatedIcon className={styles.reason_icon}>
                 <Image
                   src="/icons/Discount.png"
                   alt="Discount"
@@ -193,12 +134,12 @@ export default function Home() {
                   height={48}
                   className={styles.reason_icon_image}
                 />
-              </motion.div>
+              </AnimatedIcon>
               <p className={styles.reason_title}>Preços acessíveis</p>
             </div>
           </div>
           <div className={styles.ptero_panel}>
-            <motion.div whileHover={{ scale: 1.1 }}>
+            <AnimatedImage>
               <Image
                 src="/ptero-panel-image.png"
                 alt="Pterodactyl Panel"
@@ -206,7 +147,7 @@ export default function Home() {
                 height={410}
                 className={styles.ptero_image}
               />
-            </motion.div>
+            </AnimatedImage>
             <div className={styles.ptero_text}>
               <h2 className={styles.subtitle}>
                 Para hospedagens de <strong>Minecraft</strong>
@@ -227,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.cpanel_panel}>
-            <motion.div whileHover={{ scale: 1.1 }}>
+            <AnimatedImage>
               <Image
                 src="/cpanel-panel-image.png"
                 alt="Cpanel Panel"
@@ -235,7 +176,7 @@ export default function Home() {
                 height={410}
                 className={styles.cpanel_image}
               />
-            </motion.div>
+            </AnimatedImage>
             <div className={styles.cpanel_text}>
               <h2 className={styles.subtitle}>
                 Para hospedagens de <strong>Site</strong>

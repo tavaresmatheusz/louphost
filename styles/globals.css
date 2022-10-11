@@ -41,7 +41,7 @@ table {
 	max-height: 787px;
 }
 /*
-	Foi utilizado uma imagem ao ínves da função 'linear-gradient' para limitar o tamanho do background
+	Utilizei uma imagem ao invés do 'linear-gradient' para limitar o tamanho do background
 */
 .Site{
 	background: url("/backgrounds/background-prices.png") 0 no-repeat;

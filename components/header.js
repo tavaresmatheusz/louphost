@@ -10,19 +10,19 @@ export default function Header() {
             <nav className={styles.desktop_nav}>     
                 <ul className={styles.desktop_items}>
                     <li className={styles.desktop_list}>
-                        <Link href="/">
+                        <Link href="/" >
                             <a className={styles.desktop_item}>Início</a>
                         </Link>
                     </li>
 
                     <li className={styles.desktop_list}>
-                        <Link href="/site">
+                        <Link href="/site" >
                             <a className={styles.desktop_item}>Hospedagem de Site</a>
                         </Link>
                     </li>
 
                     <li className={styles.desktop_list}>
-                        <Link href="/minecraft">
+                        <Link href="/minecraft" >
                             <a className={styles.desktop_item}>Hospedagem de Minecraft</a>
                         </Link>
                     </li>
