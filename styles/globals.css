@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  font-family: 'Poppins';
+  font-size: 10pt;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.container{
+    padding-top: 40px;
+    max-width: 1619px;
+    margin: 0 auto;
+}
+.Home {
+    background: url("/backgrounds/background-apresentation.jpg") 0 no-repeat;
+	max-height: 787px;
+}
+/*
+	Foi utilizado uma imagem ao ínves da função 'linear-gradient' para limitar o tamanho do background
+*/
+.Site{
+	background: url("/backgrounds/background-prices.png") 0 no-repeat;
+	max-height: 901px; 
+}
+footer{
+	background: #1E1E1E;
+	min-height: 419px;
+}
+.footer-item{
+	flex: 1;
+}

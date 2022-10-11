@@ -1,0 +1,40 @@
+.desktop_nav{
+    float: right;
+}
+.desktop_active{
+    background: #A177D6;
+    width: 200px;
+    height: 200px;
+}
+.desktop_items{
+    padding-top: 25px;
+}
+.desktop_list{
+    float: left;
+}
+.desktop_item:hover{
+    color: #1E1E1E;
+}
+.desktop_item{
+    font-size: 18px;
+    color: #ffff;
+    padding-right: 25px;
+    text-decoration: none;
+}
+.desktop_button{
+    font-size: 18px;
+    text-decoration: none;
+    color: #A177D6;
+    background: #FFFFFF;
+    border-radius: 30px;
+	border: 1px solid #FFFFFF;
+	padding: 11px 37px;
+}
+.desktop_button:hover{
+    color: #FFFFFF;
+    border: 1px solid #A177D6;
+    background: #A177D6;
+    border-radius: 30px;
+	border: 1px solid #FFFFFF;
+	padding: 11px 37px;
+}

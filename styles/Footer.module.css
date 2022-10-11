@@ -1,0 +1,50 @@
+.footer_container{
+    display: flex;
+}
+.brand{
+    padding-top: 50px;
+    padding-right: 365px;
+}
+.brand_container{
+    display: flex;
+}
+.brand_logo{
+    background: url("/logo/logo-footer.png") 0 no-repeat;
+    margin-right: 30px;
+    width: 26px;
+    height: 57px;
+}
+.brand_name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFF;
+    padding-top: 20px;
+}
+.brand_subtitle{
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFF;
+    padding-top: 25px;
+    padding-bottom: 70px;
+}
+.utils{
+    padding-top: 85px;
+}
+.links_title{
+    color: #FFFF;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 35px;
+}
+.links_nav{
+    padding-top: 27px;
+}
+.links_item{
+    font-size: 18px;
+    color: #FFFF;
+    line-height: 10px;
+    text-decoration: none;
+}
+.dev{
+    padding-top: 76px;
+}

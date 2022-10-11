@@ -1,0 +1,124 @@
+.database_selector{
+    min-height: 901px;
+}
+.database_text_container{
+    padding-top: 250px;
+}
+.database_title{
+    color: #FFFFFF;
+    font-size: 23px;
+    max-width: 491px;
+    line-height: 35px;
+}
+
+.database_title strong{
+    font-size: 23px;
+    color: #1E1E1E;
+    font-weight: 800;
+}
+.database_text{
+    padding-top: 45px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+.databases_container{
+    padding-top: 45px;
+    display: flex;
+}
+.database_selected{
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 3.5px 4.5px;
+    text-decoration: none;
+}
+.database{
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background: #A177D6;
+    border-radius: 10px;
+    padding: 3.5px 3.5px;
+    text-decoration: none;
+}
+.database_usa_icon{
+    background: url("/icons/Usa.png") 0 no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.database_br_icon{
+    background: url("/icons/Brazil.png") 0 no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.database_name{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.database_name_selected{
+    color: #1E1E1E;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.prices{
+    padding-top: 30px;
+}
+.prices_box_container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 230px 200px; /* row-gap column gap */
+}
+.price_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 387px;
+    height: 638px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 3px 4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 4px 3px 4px rgba(0,0,0,0.4);
+    box-shadow: 0px 4px 3px 4px rgba(0,0,0,0.4);
+}
+.price_spec{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+}
+.browser_icon{
+    background: url("/icons/Browser.png") 0 no-repeat;
+    width: 41px;
+    height: 36px;
+    padding-right: 20px;
+}
+.price_title{
+    font-size: 40px;
+    line-height: 60px;
+    color: #000000;
+    margin-top: 40px;
+}
+.price_title strong{
+    font-size: 40px;
+    line-height: 60px;
+    color: #9768D1;
+    font-weight: 700;
+}
+.price_waves{
+    background: url("/waves.png") 0 no-repeat;
+    width: 387px;
+    height: 34px;
+}
