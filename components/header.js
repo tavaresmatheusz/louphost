@@ -16,13 +16,13 @@ export default function Header() {
                     </li>
 
                     <li className={styles.desktop_list}>
-                        <Link href="/site" >
+                        <Link href="/plans/site" >
                             <a className={styles.desktop_item}>Hospedagem de Site</a>
                         </Link>
                     </li>
 
                     <li className={styles.desktop_list}>
-                        <Link href="/minecraft" >
+                        <Link href="/plans/minecraft" >
                             <a className={styles.desktop_item}>Hospedagem de Minecraft</a>
                         </Link>
                     </li>

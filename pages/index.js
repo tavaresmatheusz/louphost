@@ -27,14 +27,12 @@ export default function Home() {
           </p>
 
           <div className={styles.text_btns_box}>
-            <Link href="#">
-              <AnimatedButton className={styles.filled_btn}>ÁREA DO CLIENTE</AnimatedButton>
-            </Link>
-            <Link href="#">
-              <AnimatedButton className={styles.unfilled_btn}>
+            <AnimatedButton className={styles.filled_btn} href="#">ÁREA DO CLIENTE</AnimatedButton>
+            
+            <AnimatedButton className={styles.unfilled_btn} href="#">
                 SAIBA MAIS
-              </AnimatedButton>
-            </Link>
+            </AnimatedButton>
+            
           </div>
         </div>
 
@@ -220,20 +218,7 @@ export default function Home() {
                   scale: 1.1,
                   transition: { duration: 0.2 },
                 }}>Solicite um teste de <strong>7 dias</strong> para comprovar nossa <strong>qualidade</strong>.</motion.h4>
-          <Link href="#">
-              <motion.a
-                href="#"
-                className={styles.free_trial_btn}
-                whileHover={{
-                  position: "relative",
-                  zIndex: 1,
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
-                }}
-              >
-              SOLICITAR
-              </motion.a>
-          </Link>
+          <AnimatedButton href="#" className={styles.free_trial_btn}>SOLICITAR</AnimatedButton>
         </div>
       </section>
     </>

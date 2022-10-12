@@ -43,7 +43,7 @@ table {
 /*
 	Utilizei uma imagem ao invés do 'linear-gradient' para limitar o tamanho do background
 */
-.Site{
+.Plan{
 	background: url("/backgrounds/background-prices.png") 0 no-repeat;
 	max-height: 901px; 
 }
