@@ -1,5 +1,6 @@
 .datacenter_selector_container{
     min-height: 901px;
+    display: flex;
 }
 .datacenter_text_container{
     padding-top: 250px;
@@ -174,4 +175,17 @@
 .price_buy_button:hover{
     cursor: pointer;
     color: #1E1E1E;
+}
+.image_container{
+    padding-left: 200px;
+}
+.no_found_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no_found{
+    font-weight: 800;
+    font-size: 30px;
+    color: #FFFFFF;
 }

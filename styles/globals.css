@@ -31,8 +31,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+header{
+	padding-top: 40px;
+}
 .container{
-    padding-top: 40px;
     max-width: 1619px;
     margin: 0 auto;
 }

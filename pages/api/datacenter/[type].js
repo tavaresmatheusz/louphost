@@ -1,6 +1,6 @@
 
 import mongoConnect from "../../../utils/mongoConnect";
-import Category from "../../../models/Category";
+import Datacenter from "../../../models/Datacenter";
 
 export default async function handler(req, res) {
     const type = req.query.type.toLowerCase();
@@ -16,10 +16,13 @@ export default async function handler(req, res) {
     switch(method) {
         case "GET":
         let data = [];
-        await Category.find({type: type}).then((cat) => {  
-            cat.forEach(c => {
-                c.plans.sort(function (x, y) { return x.price - y.price; });
-                data.push({id: c.id, type: c.type, displayName: c.displayName, iconUrl: c.iconUrl, plans: c.plans});  
+        await Datacenter.find({node: type}).then((dc) => {  
+            
+            dc.forEach(d => {
+                d.datacenters.forEach((dataCenter) => {
+                    dataCenter.plans.sort(function (x, y) { return x.price - y.price; });
+                    data.push(dataCenter);
+                })
             });
 
             code = 200;
@@ -28,29 +31,30 @@ export default async function handler(req, res) {
         }).catch((err) => {
            code = 422;
            status = "ERRO";
-           msg = err;   
+           msg = `${err}`;   
         });
 
         res.status(code).send({status: status, msg: msg}); 
         
         break;
         case "PUT":
-            const { id, price, ram, panel, disk, processor } = req.body;
+            const { city, price, ram, panel, disk, processor } = req.body;
 
-            if (!(id && price && ram && panel && disk && processor)) {
+            if (!(city && price && ram && panel && disk && processor)) {
                 code = 422;
                 status = "ERRO";
                 msg = "Alguns parâmetros não foram informados!";
             }
 
-            await Category.findOne({id: id, type: type}).then((cat) => {
-                if (cat === null) {
+            await Datacenter.findOne({node: type}).then((dc) => {
+                if (dc === null) {
                     code = 422;
                     status = "ERRO";
-                    msg = "Não é possível criar um plano em uma categoria que não existe!";
+                    msg = "Não é possível criar um plano em um node que não existe!";
                 } else {
-                    cat.plans.push({price: price, ram: ram, panel: panel, disk: disk, processor: processor});
-                    cat.save();
+                    let dataCenter = dc.datacenters.find((element) => element.city === city)
+                    dataCenter.plans.push({price: price, ram: ram, panel: panel, disk: disk, processor: processor});
+                    dc.save();
                     code = 200;
                     status = "OK";
                     msg = `Você criou um novo plano`;

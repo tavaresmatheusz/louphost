@@ -1,6 +1,6 @@
 import styles from "../../styles/Hospedagem.module.css";
 import {useRouter} from 'next/router'
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimatedButton from "../../components/animatedButton";
 import React, { useEffect, useState } from "react";
@@ -10,9 +10,13 @@ export async function getStaticPaths(){
     let types = [];
     let paths = [];
     
-    await axios.get(`${process.env.API_URL}category`).then((response) => types = response.data.msg)
+    await axios.get(`${process.env.API_URL}datacenter`).then((response) => types = response.data.msg)
 
-    types.forEach((t) => { if (!paths.includes({ params: {type: t.type }})) paths.push({ params: {type: t.type }}) });
+    types.forEach((t) => { 
+        if (!paths.includes({ params: {type: t.node }})) 
+            paths.push({ params: {type: t.node }})
+        }
+    );
 
     return {
         paths: paths,
@@ -22,25 +26,43 @@ export async function getStaticPaths(){
 
 export async function getStaticProps(context) {
     const type = context.params.type;
-    let avaliableDatacenters = null;   
 
-    await axios.get(`${process.env.API_URL}category/${type}`).then((response) => { avaliableDatacenters = response.data.msg; }).catch((err) => console.log(err));
+    let image = null;
+    let avaliableDatacenters = null;
+
+    await axios.get(`${process.env.API_URL}datacenter/${type}`).then((response) => { avaliableDatacenters = response.data.msg; }).catch((err) => console.log(err));
+    await axios.get(`${process.env.API_URL}datacenter`).then((response) => { 
+        response.data.msg.map((element) => {
+            if (element.node === type) {
+                image = element.nodeImage;  
+        }
+        });
+    }).catch((err) => console.log(`${err}`));
 
     return {
         props: {
-            avaliableDatacenters: avaliableDatacenters
+            avaliableDatacenters: avaliableDatacenters,
+            image: image
         }
     }
 }
 
 export default function Plan(props) { 
-    let categories = props.avaliableDatacenters;
-    const dynamicRoute = useRouter().asPath;
+    let avaliableDatacenters = props.avaliableDatacenters;
 
-    const [datacenter, selectDatacenter] = useState(categories[0]);
+    let image = props.image;
+
+    const dynamicRoute = useRouter().asPath;
+    
+    if (!avaliableDatacenters) {
+        useRouter().push('/404');
+        return;
+    }
+
+    const [datacenter, selectDatacenter] = useState(avaliableDatacenters[0]);
 
     useEffect(() => {
-        selectDatacenter(categories[0]);
+        selectDatacenter(avaliableDatacenters[0]);
     }, [dynamicRoute]);
 
     function handleClick(dataBase) {
@@ -56,24 +78,27 @@ export default function Plan(props) {
                         <h1 className={styles.datacenter_title}>Encontre aqui um plano que <strong>atende suas necessidades</strong> e <strong>cabe no seu bolso</strong>!</h1>
                         <h4 className={styles.datacenter_text}>Selecione a localização do datacenter</h4>
                         <div className={`${styles.datacenters_container}`}>
-                            {categories.map((dc, index) => {
-                            if (dc.id === datacenter.id) {
+                            {avaliableDatacenters.map((dc, index) => {
+                            if (dc.city === datacenter.city && dc.country === datacenter.country) {
                                 return (         
                                     <button onClick={() => handleClick(dc)} className={`${styles.datacenter_selected}`} key={index}>
-                                        <div className={styles.datacenter_icon} style={{background: `url(../../${dc.iconUrl}) 0 no-repeat`}}/> 
-                                        <p className={styles.datacenter_name_selected}>{`${dc.displayName}, ${dc.id}`}</p>
+                                        <div className={styles.datacenter_icon} style={{background: `url(../../${dc.countryFlagUrl}) 0 no-repeat`}}/> 
+                                        <p className={styles.datacenter_name_selected}>{`${dc.city}, ${dc.country}`}</p>
                                     </button>
                                 );
                              } else {
                                 return (       
                                     <a onClick={() => handleClick(dc)} className={`${styles.datacenter}`} key={index}>
-                                        <div className={styles.datacenter_icon} style={{background: `url(../../${dc.iconUrl}) 0 no-repeat`}}/> 
-                                        <p className={styles.datacenter_name}>{`${dc.displayName}, ${dc.id}`}</p>
+                                        <div className={styles.datacenter_icon} style={{background: `url(../../${dc.countryFlagUrl}) 0 no-repeat`}}/> 
+                                        <p className={styles.datacenter_name}>{`${dc.city}, ${dc.country}`}</p>
                                     </a>
                                 );
                                 }
                             })}	
                         </div>
+                    </div>
+                    <div className={styles.image_container}>
+                        <Image src={`${image.url}`} alt="Node image" width={image.size.imageWidth} height={image.size.imageHeight}/>
                     </div>
                 </div>
             </div>
