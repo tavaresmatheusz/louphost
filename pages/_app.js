@@ -5,11 +5,9 @@ import { AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={Component.name}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <Layout className={pageProps.page}>
+      <Component {...pageProps} />
+    </Layout>
   )
 }
 
