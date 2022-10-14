@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from  './header.js';
 import Footer from  './footer.js';
 
-export default function Layout({children}){ 
+export default function Layout({children, className}){ 
     return (
         <>
             <Head>
@@ -15,16 +15,17 @@ export default function Layout({children}){
 
                 <title>LoupHost - Hospedagem sem dor de cabeça</title>
             </Head>
-            
-            <div className="container">
-                <Header/>
+            <div className={className}>
+                <div className="container">
+                    <Header/>
+                </div>
+                
+                <main>
+                    {children}
+                </main>    
+                
+                <Footer/>
             </div>
-            
-            <main>
-                {children}
-            </main>    
-            
-            <Footer/>
         </>
     )
 }

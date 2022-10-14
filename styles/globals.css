@@ -40,7 +40,7 @@ header{
 }
 .Home {
     background: url("/backgrounds/background-apresentation.jpg") 0 no-repeat;
-	max-height: 787px;
+	height: 787px;
 }
 /*
 	Utilizei uma imagem ao invés do 'linear-gradient' para limitar o tamanho do background

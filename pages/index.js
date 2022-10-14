@@ -6,6 +6,13 @@ import AnimatedButton from "../components/animatedButton";
 import AnimatedIcon from "../components/animatedIcon";
 import AnimatedImage from "../components/animatedImage";
 
+export async function getStaticProps() {
+  return {
+    props: {
+      page: "Home"
+    }
+  }
+}
 export default function Home() {
   return (
     <>
