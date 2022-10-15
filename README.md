@@ -1,5 +1,6 @@
 ### louphost-v2
-Uma nova versão do site da loup.host, agora desenvolvido com Next.js
+Uma nova versão do site da loup.host, agora desenvolvido com Next.js e usando MongoDB para listar os planos
+# Demo
 Demo: https://louphost-yuf9.vercel.app/
 
 ### Layout
