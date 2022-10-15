@@ -48,3 +48,25 @@
 .dev{
     padding-top: 76px;
 }
+
+@media only screen and (max-width:1200px){
+    .brand{
+        padding-right: 20px;
+    }
+}
+@media only screen and (max-width:800px){
+    .footer_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .brand_container{
+        justify-content: center;
+    }
+    .links_title{
+        text-align: center;
+    }
+    .links_nav{
+        text-align: center;
+    }
+}

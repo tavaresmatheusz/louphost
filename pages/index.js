@@ -47,7 +47,7 @@ export default function Home() {
           <Image
             src="/image-apresentation.svg"
             alt="Servers"
-            width={790}
+            width={556}
             height={790}
           />
         </div>
@@ -56,11 +56,12 @@ export default function Home() {
       <section className={`${styles.reasons}`}>
         <div className="container">
           <div className={styles.reasons_title_box}>
-            <h4 className={`${styles.reasons_title} ${styles.title}`}>
+            <h4 className={`${styles.title}`}>
               Por que a loup.host
             </h4>
             <div className={styles.reason_why_icon}/>
           </div>
+          <div className={styles.reasons_container}>
 
           <div className={styles.reasons_icons}>
             <div className={styles.reason}>
@@ -101,9 +102,7 @@ export default function Home() {
               </AnimatedIcon>
               <p className={styles.reason_title}>Suporte 24/7</p>
             </div>
-          </div>
 
-          <div className={styles.reasons_icons}>
             <div className={styles.reason}>
               <AnimatedIcon className={styles.reason_icon}>
                 <Image
@@ -143,8 +142,9 @@ export default function Home() {
               <p className={styles.reason_title}>Preços acessíveis</p>
             </div>
           </div>
+          </div>
           <div className={styles.ptero_panel}>
-            <AnimatedImage>
+            <AnimatedImage className={styles.panel_image_container}>
               <Image
                 src="/ptero-panel-image.png"
                 alt="Pterodactyl Panel"
@@ -154,11 +154,11 @@ export default function Home() {
               />
             </AnimatedImage>
             <div className={styles.ptero_text}>
-              <h2 className={styles.subtitle}>
+              <h2 className={`${styles.subtitle} ${styles.title_content_panel}`}>
                 Para hospedagens de <strong>Minecraft</strong>
               </h2>
               <h4
-                className={`${styles.title}`}
+                className={`${styles.title} ${styles.title_content_panel}`}
                 style={{ paddingTop: 20 + "px" }}
               >
                 Painel <strong>Pterodactyl</strong>
@@ -173,7 +173,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.cpanel_panel}>
-            <AnimatedImage>
+            <AnimatedImage className={styles.panel_image_container}>
               <Image
                 src="/cpanel-panel-image.png"
                 alt="Cpanel Panel"
@@ -183,17 +183,17 @@ export default function Home() {
               />
             </AnimatedImage>
             <div className={styles.cpanel_text}>
-              <h2 className={styles.subtitle}>
+              <h2 className={`${styles.subtitle} ${styles.title_content_panel}`}>
                 Para hospedagens de <strong>Site</strong>
               </h2>
               <h4
-                className={`${styles.title}`}
+                className={`${styles.title} ${styles.title_content_panel}`}
                 style={{ paddingTop: 20 + "px" }}
               >
                 Painel <strong>Cpanel</strong>
               </h4>
               <p
-                className={`${styles.text_panel}`}
+                className={`${styles.text_panel} `}
                 style={{ paddingTop: 20 + "px" }}
               >
                 Painel <strong>completo</strong>, <strong>intuitivo</strong> e{" "}

@@ -26,10 +26,11 @@
 .datacenters_container{
     padding-top: 45px;
     display: flex;
+    flex-direction: row;
+    gap: 20px 20px;
 }
 .datacenter_selected{
     cursor: pointer;
-    margin-right: 10px;
     display: flex;  
     align-items: center;
     justify-content: center;
@@ -40,7 +41,6 @@
 }
 .datacenter{
     cursor: pointer;
-    margin-right: 10px;
     display: flex;  
     align-items: center;
     justify-content: center;
@@ -70,9 +70,9 @@
 .prices_box_container{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 230px 200px; /* row-gap column gap */
+    gap: 230px 200px; 
     padding-bottom: 187px;
 }
 .price_title{
@@ -179,13 +179,30 @@
 .image_container{
     padding-left: 200px;
 }
-.no_found_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.no_found{
-    font-weight: 800;
-    font-size: 30px;
-    color: #FFFFFF;
+@media only screen and (max-width:1200px){
+    .image_container{
+        padding-left: 0px;
+    }
+    .datacenter_selector_container{
+        flex-direction: column-reverse;
+    }
+    .datacenter_text_container{
+        padding-top: 10px;
+    }
+    .prices{
+        padding-top: 350px;
+    }
+    .datacenter_title{
+        text-align: center;
+        max-width: 100%;
+    }
+    .datacenter_text{
+        text-align: center;
+        max-width: 100%;
+    }
+    .datacenters_container{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+    }
 }

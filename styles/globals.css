@@ -40,14 +40,12 @@ header{
 }
 .Home {
     background: url("/backgrounds/background-apresentation.jpg") 0 no-repeat;
+	background-size: 100% 787px;
 	height: 787px;
 }
-/*
-	Utilizei uma imagem ao invés do 'linear-gradient' para limitar o tamanho do background
-*/
 .Plan{
-	background: url("/backgrounds/background-prices.png") 0 no-repeat;
-	max-height: 901px; 
+	background: linear-gradient(180deg, rgba(161,119,214,1) 0%, rgba(213,180,255,1) 100%);
+	height: 800px;
 }
 footer{
 	background: #1E1E1E;
@@ -55,4 +53,29 @@ footer{
 }
 .footer-item{
 	flex: 1;
+}
+@media only screen and (max-width:1620px){
+	.container{
+		max-width: 1400px;
+	}
+}
+@media only screen and (max-width:1410px){
+	.Home{
+		background: linear-gradient(180deg, rgba(161,119,214,1) 0%, rgba(213,180,255,1) 100%);
+		height: 800px;
+	}
+	.container{
+		max-width: 1000px;
+	}
+}
+@media only screen and (max-width:1200px){
+	.Home{
+		height: 1500px;
+	}
+	.Plan{
+		height: 1340px;
+	}
+	.container{
+		max-width: 100%;
+	}
 }

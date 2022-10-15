@@ -30,7 +30,7 @@
 }
 .text{
   line-height: 30px;
-  width: 564px;
+  max-width: 564px;
   font-size: 20px;
   color: #1E1E1E;
 }
@@ -51,7 +51,6 @@
   border-radius: 10px;
   border: 1px solid #A177D6;
   padding: 20px 17.5px;
-  float: left;
 }
 .unfilled_btn:hover,
 .filled_btn:hover{
@@ -62,29 +61,27 @@
   font-size: 20px;
   font-weight: 700;
   color: #1E1E1E;
-  background: #FFFFFF;
+  background: none;
   border-radius: 10px;
   border: 1px solid #A177D6;
   padding: 20px 17.5px;
-  float: left;
-  margin-left: 90px;
 }
 .image_box{
   padding-right: 20px;
 }
 .text_btns_box{
   padding-top: 60px;
+  display: flex;
+  gap: 0px 90px;
 }
 .reasons_title_box{
-  padding-top: 80px;
+  padding-top: 90px;
   display: flex;
-}
-.reasons_title{
-  padding-top: 25px;
+  align-items: center;
 }
 .reasons{
-  background: url("/backgrounds/background-reasons.jpg");
-  max-height: 1975px;
+  background: url("/backgrounds/background-reasons.jpg") no-repeat;
+  min-height: 1975px;
 }
 .reason_why_icon{
   margin-left: 30px;
@@ -95,19 +92,17 @@
 .reasons_icons{
   display: flex;
   flex-direction: row;
-  gap: 250px;
-}
-.reason{
-  width: 280px;
-  display: flex;
-  flex: 1;
-  padding-top: 110px;
-}
-.reason2{
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 50px 0px;
 }
-.reason3{
-  justify-content: right;
+.reasons_container{
+  padding-top: 150px;
+}
+.reason{ 
+  display: flex;
+  flex: 0 0 33.3333%;
 }
 .reason_icon{
   padding: 5px 5px;
@@ -129,30 +124,32 @@
   line-height: 33px;
 }
 .ptero_panel{
-  padding-top: 270px;
+  padding-top: 200px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ptero_image{
   padding-left: 65px;
 }
 .ptero_text{
-  padding-top: 50px;
   padding-left: 130px;
 }
 .cpanel_panel{
   padding-top: 200px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cpanel_image{
   padding-left: 65px;
 }
 .cpanel_text{
-  padding-top: 50px;
   padding-left: 130px;
 }
 .text_panel{
   line-height: 33px;
-  width: 330px;
+  max-width: 330px;
   font-size: 22px;
   color: #1E1E1E;
 }
@@ -179,7 +176,7 @@
 }
 .goals_title_icon{
   background: url("/icons/Shield-Done.png") 0;
-  width: 69px;
+  min-width: 69px;
   height: 81px;
   margin-left: 30px;
 }
@@ -236,4 +233,185 @@
   font-weight: 700;
   font-size: 20px;
 	padding: 19px 59px;
+}
+@media only screen and (max-width:1410px){
+  .apresentation{
+    align-items: center;
+    padding-bottom: 90px;
+  }
+  
+  .reason{ 
+    display: flex;
+    flex: 0 0 50%;
+  }
+  .text_box{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+  }
+  .image_box{
+    width: 50%;
+    padding-right: 0px;
+  }
+  .apresentation_textspacing{
+    padding-top: 30px;
+  }
+  .subtitle strong{
+    font-size: 23px;
+    color: #FFFFFF;
+    font-weight: 800;
+  }
+  .title strong{
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .text strong{
+    color: #FFFFFF;
+  }
+  .text_btns_box{
+    padding-bottom: 60px;
+  }
+  .filled_btn{
+    text-align: center;
+    color: #1E1E1E;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+  .unfilled_btn{
+    text-align: center;
+    border: 1px solid #1E1E1E;
+  }
+  .reasons{
+    padding-top: 180px;
+  }
+  .title_content_panel strong{
+    color: #A177D6;
+  }
+}
+@media only screen and (max-width:1200px){
+  .apresentation{
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+  .apresentation_textspacing{
+    padding-top: 20px;
+  }
+  .reasons_icons{
+    flex-wrap: wrap;
+    gap: 20px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .reasons_title_box{
+    justify-content: center;
+  }
+  .image_box{
+    width: 50%;
+    height: 50%;
+  }
+  .text{
+    text-align: center;
+  }
+  .subtitle{
+    text-align: center;
+  }
+  .title{
+    text-align: center;
+  }
+  .subtitle strong{
+    font-size: 23px;
+    color: #FFFFFF;
+    font-weight: 800;
+  }
+  .title strong{
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .text strong{
+    color: #FFFFFF;
+  }
+  .filled_btn{
+    color: #1E1E1E;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+  .unfilled_btn{
+    border: 1px solid #1E1E1E;
+  }
+  .unfilled_btn:hover,
+  .filled_btn:hover{
+    cursor: pointer;
+  }
+  .text_btns_box{
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .reason_title{
+    padding-top: 0px;
+  }
+  .reason{
+    align-items: center;
+  }
+  .ptero_panel{
+    flex-direction: column;
+  }
+  .cpanel_panel{
+    flex-direction: column;
+  }
+  .ptero_text{
+    padding-top: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cpanel_text{
+    padding-top: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title_content_panel strong{
+    color: #A177D6;
+  }
+  .text_panel{
+    text-align: center;
+  }
+  .goals_container{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .goals_title_container{
+    justify-content: center;
+    align-items: center;
+  }
+  .goals_text{
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+  }
+  .goals_title{
+    padding-top: 0px;
+    padding-right: 3px;
+  }
+  .goals_title_icon{
+    margin-left: 0px;
+  }
+  .goals_text_container{
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+
 }

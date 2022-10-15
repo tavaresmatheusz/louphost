@@ -1,4 +1,4 @@
-import styles from "../../styles/Hospedagem.module.css";
+import styles from "../../styles/Plan.module.css";
 import {useRouter} from 'next/router'
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -18,7 +18,6 @@ export async function getStaticPaths(){
             
         });
     });
-    console.log(paths);
     return {
         paths: paths,
         fallback: false
