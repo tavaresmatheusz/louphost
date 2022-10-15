@@ -65,10 +65,11 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-
-            <div className={`${styles.dev} footer-item`}>
-                <Image src="/matheus.png" alt="Matheus Tavares" width={139} height={54}/>
-            </div>
+            <Link href={"https://github.com/tavaresmatheusz/louphost"}>
+                <div className={`${styles.dev} footer-item`}>
+                    <Image src="/matheus.png" alt="Matheus Tavares" width={139} height={54}/>
+                </div>
+            </Link>
         </div>
        </div>
     </footer>
