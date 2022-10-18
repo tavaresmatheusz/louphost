@@ -106,8 +106,8 @@ export default function Plan(props) {
                                     })}	
                                 </div>
                         </div>
-                        {imageSize.imageHeight < 500 && (<div className="divider"/>)}
                         <div className={styles.image_container}>
+                            {imageSize.imageHeight < 500 && (<div className="divider"/>)}
                                 <Image src={`${image}`} alt="Node image" width={imageSize.imageWidth} height={imageSize.imageHeight}/>
                         </div>
                     </div>
