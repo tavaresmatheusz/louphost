@@ -56,6 +56,7 @@ export async function getStaticProps(context) {
 }
 
 export function className() {  return "Plan"}
+
 export default function Plan(props) { 
     let avaliableDatacenters = props.avaliableDatacenters;
 
@@ -105,6 +106,7 @@ export default function Plan(props) {
                                     })}	
                                 </div>
                         </div>
+                        {imageSize.imageHeight < 500 && (<div className="divider"/>)}
                         <div className={styles.image_container}>
                                 <Image src={`${image}`} alt="Node image" width={imageSize.imageWidth} height={imageSize.imageHeight}/>
                         </div>
